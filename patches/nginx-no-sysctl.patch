@@ -1,0 +1,12 @@
+diff --git a/src/os/unix/ngx_linux_config.h b/src/os/unix/ngx_linux_config.h
+index 2834032..9d54700 100644
+--- a/src/os/unix/ngx_linux_config.h
++++ b/src/os/unix/ngx_linux_config.h
+@@ -51,7 +51,6 @@
+ #include <malloc.h>             /* memalign() */
+ #include <limits.h>             /* IOV_MAX */
+ #include <sys/ioctl.h>
+-#include <sys/sysctl.h>
+ #include <crypt.h>
+ #include <sys/utsname.h>        /* uname() */
+ 

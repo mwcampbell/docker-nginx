@@ -11,4 +11,6 @@ make #$jobs
 make install
 
 rm -rf /etc/ssl/man
+rm -rf /etc/ssl/misc
+mkdir -p $RUNTIME_ROOT/etc
 cp -a /etc/ssl $RUNTIME_ROOT/etc/ssl

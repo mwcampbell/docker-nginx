@@ -1,0 +1,26 @@
+# Derived from the Sabotage build script
+
+cp -a $DEPS/nginx .
+cd nginx
+
+patch -p1 < $PATCHDIR/nginx.patch
+patch -p1 < $PATCHDIR/nginx-no-sysctl.patch
+
+CORE_LINK="-static" \
+./configure \
+  --with-ipv6 \
+  --prefix= \
+  --sbin-path=/bin/nginx \
+  --conf-path=/etc/nginx/nginx.conf \
+  --error-log-path=/var/log/nginx/error.log \
+  --http-log-path=/var/log/nginx/access.log \
+  --pid-path=/run/nginx.pid \
+  --lock-path=/run/lock/nginx.lock \
+  --http-client-body-temp-path=/var/spool/nginx/body \
+  --http-fastcgi-temp-path=/var/spool/nginx/fastcgi \
+  --http-proxy-temp-path=/var/spool/nginx/proxy \
+  --http-scgi-temp-path=/var/spool/nginx/scgi \
+  --http-uwsgi-temp-path=/var/spool/nginx/uwsgi
+make $jobs
+make install DESTDIR=$RUNTIME_ROOT
+mkdir -p $RUNTIME_ROOT/var/spool/nginx
