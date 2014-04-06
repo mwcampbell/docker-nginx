@@ -4,3 +4,6 @@
 [submodule "deps/pcre"]
 	path = deps/pcre
 	url = git://gitorious.org/pcre/pcre
+[submodule "deps/openssl"]
+	path = deps/openssl
+	url = git://git.openssl.org/openssl

@@ -1,0 +1,14 @@
+# Portions derived from the Sabotage Linux build script
+
+cp -a $DEPS/openssl .
+cd openssl
+
+sed -i 's/-DTERMIO /-DTERMIOS /g' Configure
+sed -i 's/defined(linux)/0/' crypto/ui/ui_openssl.c
+
+./config --prefix=/ --openssldir=/etc/ssl --libdir=/lib no-dso zlib
+make #$jobs
+make install
+
+rm -rf /etc/ssl/man
+cp -a /etc/ssl $RUNTIME_ROOT/etc/ssl
