@@ -1,0 +1,13 @@
+diff --git a/auto/lib/openssl/conf b/auto/lib/openssl/conf
+index 528ee17..73ef359 100644
+--- a/auto/lib/openssl/conf
++++ b/auto/lib/openssl/conf
+@@ -47,7 +47,7 @@ else
+         ngx_feature_run=no
+         ngx_feature_incs="#include <openssl/ssl.h>"
+         ngx_feature_path=
+-        ngx_feature_libs="-lssl -lcrypto"
++        ngx_feature_libs="-lssl -lcrypto -lz"
+         ngx_feature_test="SSL_library_init()"
+         . auto/feature
+ 
