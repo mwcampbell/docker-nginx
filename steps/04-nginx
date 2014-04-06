@@ -26,3 +26,9 @@ CORE_LINK="-static" \
 make $jobs
 make install DESTDIR=$RUNTIME_ROOT
 mkdir -p $RUNTIME_ROOT/var/spool/nginx
+
+rm -f $RUNTIME_ROOT/etc/nginx/*.default
+cat >> $RUNTIME_ROOT/etc/nginx/nginx.conf <<END
+error_log stderr info;
+daemon off;
+END

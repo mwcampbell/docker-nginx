@@ -12,4 +12,5 @@ docker rmi $username/nginx || true
 docker build --rm -t=$username/nginx-build .
 docker run --rm $username/nginx-build cat /runtime.tar > runtime/runtime.tar
 docker build --rm -t=$username/nginx runtime
+rm runtime/runtime.tar
 docker rmi $username/nginx-build
