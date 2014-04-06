@@ -1,0 +1,6 @@
+cp -a $DEPS/zlib .
+cd zlib
+
+./configure --prefix=/local --static
+make $jobs
+make install
