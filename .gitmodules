@@ -1,3 +1,6 @@
 [submodule "deps/zlib"]
 	path = deps/zlib
 	url = git://github.com/madler/zlib
+[submodule "deps/pcre"]
+	path = deps/pcre
+	url = git://gitorious.org/pcre/pcre

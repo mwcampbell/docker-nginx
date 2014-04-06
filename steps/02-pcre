@@ -1,0 +1,7 @@
+cp -a $DEPS/pcre .
+cd pcre
+
+./autogen.sh
+./configure --prefix=/local --disable-shared
+make $jobs
+make install
