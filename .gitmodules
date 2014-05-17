@@ -7,3 +7,6 @@
 [submodule "deps/openssl"]
 	path = deps/openssl
 	url = git://git.openssl.org/openssl
+[submodule "deps/nginx"]
+	path = deps/nginx
+	url = git://github.com/mwcampbell/nginx

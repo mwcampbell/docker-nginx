@@ -8,7 +8,7 @@ patch -p1 < $PATCHDIR/nginx-no-sysctl.patch
 patch -p1 < $PATCHDIR/nginx-openssl-with-zlib.patch
 
 CORE_LINK="-static" \
-./configure \
+auto/configure \
   --with-http_ssl_module \
   --with-ipv6 \
   --prefix= \

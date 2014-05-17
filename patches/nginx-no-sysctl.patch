@@ -1,12 +1,12 @@
 diff --git a/src/os/unix/ngx_linux_config.h b/src/os/unix/ngx_linux_config.h
-index 2834032..9d54700 100644
+index 72594ba..b080d15 100644
 --- a/src/os/unix/ngx_linux_config.h
 +++ b/src/os/unix/ngx_linux_config.h
-@@ -51,7 +51,6 @@
- #include <malloc.h>             /* memalign() */
- #include <limits.h>             /* IOV_MAX */
- #include <sys/ioctl.h>
+@@ -84,7 +84,6 @@ extern ssize_t sendfile(int s, int fd, int32_t *offset, size_t size);
+ 
+ #if (NGX_HAVE_RTSIG)
+ #include <poll.h>
 -#include <sys/sysctl.h>
- #include <crypt.h>
- #include <sys/utsname.h>        /* uname() */
+ #endif
+ 
  
